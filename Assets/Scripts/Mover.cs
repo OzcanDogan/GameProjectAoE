@@ -1,16 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Mover : MonoBehaviour
 {
-    [SerializeField] Transform target;
-
-
-    // Update is called once per frame
+    [SerializeField] Transform Target;
     void Update()
     {
-        GetComponent<NavMeshAgent>().destination= target.position;
+        if (Input.GetMouseButton(1)) // Sað týk
+        {
+            MoveToCursor();
+        }
+    }
+
+    private void MoveToCursor()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        bool hasHit = Physics.Raycast(ray, out hit);
+
+        if (hasHit)
+        {
+            GetComponent<NavMeshAgent>().SetDestination(hit.point);
+        }
     }
 }

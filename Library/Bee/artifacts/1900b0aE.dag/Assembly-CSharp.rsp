@@ -359,6 +359,8 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.62f3/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Environments/Trees/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/CTI_CustomWind.cs"
 "Assets/Environments/Trees/Render Pipeline Support/Built-in RP/CTI Runtime Components/Scripts/CTI_Utils.cs"
+"Assets/FollowCamera.cs"
+"Assets/Scripts/FollowCameraScript.cs"
 "Assets/Scripts/Mover.cs"
 -langversion:9.0
 /deterministic

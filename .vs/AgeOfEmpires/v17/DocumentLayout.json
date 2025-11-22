@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Ozcan\\AgeOfEmpires\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\rtsmultiselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\unitspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|c:\\users\\ozcan\\ageofempires\\assets\\scripts\\rtsmultiselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rtsmultiselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|c:\\users\\ozcan\\ageofempires\\assets\\scripts\\rtsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\rtsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rtsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\unitspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\outlinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,11 +42,15 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UnitController.cs",
               "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\UnitController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnitController.cs",
@@ -54,12 +58,11 @@
               "RelativeToolTip": "Assets\\Scripts\\UnitController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T00:20:09.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T00:20:09.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RTSManager.cs",
               "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\RTSManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RTSManager.cs",
@@ -67,12 +70,11 @@
               "RelativeToolTip": "Assets\\Scripts\\RTSManager.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAQwEwAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T23:50:56.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T23:50:56.718Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RTSMultiSelect.cs",
               "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\RTSMultiSelect.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RTSMultiSelect.cs",
@@ -85,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SelectableUnit.cs",
               "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\SelectableUnit.cs",
               "RelativeDocumentMoniker": "Assets\\SelectableUnit.cs",
@@ -93,8 +95,7 @@
               "RelativeToolTip": "Assets\\SelectableUnit.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T23:46:41.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T23:46:41.951Z"
             },
             {
               "$type": "Document",
@@ -110,13 +111,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "UnitSpawner.cs",
               "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\UnitSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnitSpawner.cs",
               "ToolTip": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\UnitSpawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\UnitSpawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T22:50:29.163Z",
               "EditorCaption": ""

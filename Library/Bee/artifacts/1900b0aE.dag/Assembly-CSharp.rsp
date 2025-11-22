@@ -363,6 +363,7 @@
 "Assets/Scripts/OutlineController.cs"
 "Assets/Scripts/RTSManager.cs"
 "Assets/Scripts/RTSMultiSelect.cs"
+"Assets/Scripts/SoldierController.cs"
 "Assets/Scripts/UnitController.cs"
 "Assets/Scripts/UnitSpawner.cs"
 "Assets/SelectableUnit.cs"

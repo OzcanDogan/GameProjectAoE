@@ -1,33 +1,46 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraRTSController : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 20f;
-    public float edgeSize = 20f;
 
     [Header("Zoom")]
     public float zoomSpeed = 200f;
     public float minZoom = 10f;
     public float maxZoom = 80f;
 
-    [Header("Limits")]
-    public float minX = -50;
-    public float maxX = 50;
-    public float minZ = -50;
-    public float maxZ = 50;
+    // Terrain’den otomatik hesaplanacak
+    private float minX, maxX, minZ, maxZ;
 
     private Camera cam;
 
     void Start()
     {
         cam = Camera.main;
+
+        // TERRAIN'İ BUL → sınırları hesapla
+        Terrain terrain = Terrain.activeTerrain;
+        if (terrain != null)
+        {
+            float width = terrain.terrainData.size.x;
+            float length = terrain.terrainData.size.z;
+
+            minX = terrain.transform.position.x;
+            maxX = terrain.transform.position.x + width;
+
+            minZ = terrain.transform.position.z;
+            maxZ = terrain.transform.position.z + length;
+        }
+        else
+        {
+            Debug.LogWarning("Terrain bulunamadı, kamera limitleri çalışmayacak!");
+        }
     }
 
     void Update()
     {
         HandleKeyboardMovement();
-        HandleEdgeScroll();
         HandleZoom();
         ClampPosition();
     }
@@ -43,24 +56,6 @@ public class CameraRTSController : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) move += Vector3.right;
 
         transform.Translate(move * moveSpeed * Time.deltaTime, Space.World);
-    }
-
-    void HandleEdgeScroll()
-    {
-        Vector3 move = Vector3.zero;
-
-        if (Input.mousePosition.y >= Screen.height - edgeSize)
-            move += Vector3.forward;
-
-        if (Input.mousePosition.y <= edgeSize)
-            move += Vector3.back;
-
-        if (Input.mousePosition.x >= Screen.width - edgeSize)
-            move += Vector3.right;
-
-        if (Input.mousePosition.x <= edgeSize)
-            move += Vector3.left;
-
     }
 
     void HandleZoom()

@@ -95,4 +95,5 @@ public class ResourceManager : MonoBehaviour
     {
         AddGold(amount);
     }
+
 }

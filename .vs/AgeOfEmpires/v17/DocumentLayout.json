@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Ozcan\\AgeOfEmpires\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|c:\\users\\ozcan\\ageofempires\\assets\\scripts\\rtsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rtsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|c:\\users\\ozcan\\ageofempires\\assets\\scripts\\playeranimsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playeranimsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|c:\\users\\ozcan\\ageofempires\\assets\\scripts\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|c:\\users\\ozcan\\ageofempires\\assets\\scripts\\villagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\villagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\goldmine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goldmine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\camerartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\soldiercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\soldiercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|c:\\users\\ozcan\\ageofempires\\assets\\scripts\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|C:\\Users\\Ozcan\\AgeOfEmpires\\assets\\scripts\\unitspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFB7125-B69D-64F8-3006-31B02C0C9937}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unitspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,89 +39,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RTSManager.cs",
-              "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\RTSManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\RTSManager.cs",
-              "ToolTip": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\RTSManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\RTSManager.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAQwJ8AAAAgAAAAAAAAAA==",
+              "Title": "PlayerAnimSync.cs",
+              "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\PlayerAnimSync.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAnimSync.cs",
+              "ToolTip": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\PlayerAnimSync.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerAnimSync.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowBsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T21:27:17.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Building.cs",
-              "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\Building.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Building.cs",
-              "ToolTip": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\Building.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Building.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T21:26:20.894Z",
+              "WhenOpened": "2025-12-06T17:38:45.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "VillagerController.cs",
-              "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\VillagerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\VillagerController.cs",
-              "ToolTip": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\VillagerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\VillagerController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwDsAAAAcAAAAAAAAAA==",
+              "Title": "UnitSpawner.cs",
+              "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\UnitSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitSpawner.cs",
+              "ToolTip": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\UnitSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitSpawner.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwB4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T22:54:02.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-06T16:23:23.097Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SoldierController.cs",
-              "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\SoldierController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SoldierController.cs",
-              "ToolTip": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\SoldierController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SoldierController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAQwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T22:47:41.345Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CameraRTSController.cs",
-              "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\CameraRTSController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraRTSController.cs",
-              "ToolTip": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\CameraRTSController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CameraRTSController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAwwDsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T22:21:51.008Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GoldMine.cs",
-              "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\GoldMine.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GoldMine.cs",
-              "ToolTip": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\GoldMine.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GoldMine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T20:38:19.31Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "UnitController.cs",
               "DocumentMoniker": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\UnitController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnitController.cs",
               "ToolTip": "C:\\Users\\Ozcan\\AgeOfEmpires\\Assets\\Scripts\\UnitController.cs",
               "RelativeToolTip": "Assets\\Scripts\\UnitController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAkwDMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T00:20:09.048Z"
+              "WhenOpened": "2025-11-13T00:20:09.048Z",
+              "EditorCaption": ""
             }
           ]
         }

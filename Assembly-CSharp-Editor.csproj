@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{01552358-17A2-F04D-3A03-9FC9FE8CDFE4}</ProjectGuid>
+    <ProjectGuid>{E4372EAF-ED89-FACA-6C9B-EB1804786EBA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -417,28 +417,12 @@
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.6\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.10.2\Lib\Editor\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.10.2\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.10.2\Lib\Editor\log4netPlastic.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.10.2\Lib\Editor\unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
@@ -1037,10 +1021,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.AI.Navigation.Updater">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
       <Private>False</Private>
@@ -1080,47 +1060,47 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{EDFB7125-B69D-64F8-3006-31B02C0C9937}</Project>
+      <Project>{EEF8C832-E622-BB8C-B6EC-F0F33A1BBBD1}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{9B629C82-3A6A-7D64-DF29-36CD6C7E8018}</Project>
+      <Project>{98F61BF9-1878-CE1A-650B-9A259AECC37A}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{47F186FF-21B2-E933-B3C4-065FD092ECBB}</Project>
+      <Project>{750C76FD-9752-F2FB-07F4-F80EED5CC3D3}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{75603ADB-6CA9-738F-561B-5A5935F3FF6A}</Project>
+      <Project>{ED73A97E-3B79-27B5-A583-BA98CB2A59D9}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
-      <Project>{12FC8D35-A205-FFC3-49CE-9A8A688E9262}</Project>
+      <Project>{444427B6-259E-571D-EFB3-AD2CA6461FB4}</Project>
       <Name>PhotonChat</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{B8C7FABD-2335-C5B0-338C-DAA7C03DC282}</Project>
+      <Project>{8720796F-9898-FAE7-BEDD-8C0711D0671F}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{A6E6A564-7495-2641-A757-E4E12FC2C2EF}</Project>
+      <Project>{AEDCE51E-EE0F-89CF-6450-C325CBBD5495}</Project>
       <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{1D628046-B25B-FE3B-D209-5EF6FAC576BE}</Project>
+      <Project>{92CB5DDC-B5CA-30C0-EBAB-04A43936EDE1}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{0F5BD8DD-F673-0539-3323-8D45E6E2A61B}</Project>
+      <Project>{BC3F222A-1694-EAE0-47A2-A92FAAA3AFCE}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{1DC83240-5D72-431A-16FB-29B57DAE2D8D}</Project>
+      <Project>{7A57F5D6-4912-B503-99F7-6023352B1531}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{4F3B3963-23D6-2A11-2AFC-0D7132406D3E}</Project>
+      <Project>{FD07844F-F32F-50A9-6771-9E6CE14BB913}</Project>
       <Name>PunDemos.DemoHubEditor</Name>
     </ProjectReference>
   </ItemGroup>

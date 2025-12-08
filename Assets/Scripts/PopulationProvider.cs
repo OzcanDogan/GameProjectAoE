@@ -1,19 +1,25 @@
-using UnityEngine;
+﻿using UnityEngine;
+using Photon.Pun;
 
-public class PopulationProvider : MonoBehaviour
+public class PopulationProvider : MonoBehaviourPun
 {
-    [Header("N�fus Kapasitesi")]
-    [SerializeField] private int populationProvided = 10;
+    [Header("Nüfus Kapasitesi")]
+    public int populationProvided = 10;
+
+    [Header("Ana Bina mı? (TownCenter)")]
+    public bool isTownCenter = false;
 
     private void Start()
     {
-        if (ResourceManager.Instance != null)
+        // Population sadece sahibi için artsın
+        if (photonView.IsMine)
         {
             ResourceManager.Instance.AddPopulationCap(populationProvided);
+            Debug.Log($"🏛 {name}: Population +{populationProvided} eklendi (bina bana ait).");
         }
         else
         {
-            Debug.LogError("PopulationProvider: ResourceManager bulunamad�!");
+            Debug.Log($"👁 {name}: Bu bina bana ait değil, population eklemiyorum.");
         }
     }
 }

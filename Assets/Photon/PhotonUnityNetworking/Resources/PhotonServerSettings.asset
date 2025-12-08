@@ -41,6 +41,8 @@ MonoBehaviour:
   - RespawnSpaceship
   - SpawnMineRPC
   - TakeDamage
+  - RPC_Attack
+  - EndGame
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

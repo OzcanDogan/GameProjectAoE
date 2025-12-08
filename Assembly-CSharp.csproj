@@ -124,6 +124,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\Demo Chat\Code\Utilities\ChatIdCheckerUI.cs" />
     <Compile Include="Assets\GameSetupManager.cs" />
     <Compile Include="Assets\Environments\Trees\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_Utils.cs" />
+    <Compile Include="Assets\Scripts\UnitHealth.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\VillagerController.cs" />
   </ItemGroup>

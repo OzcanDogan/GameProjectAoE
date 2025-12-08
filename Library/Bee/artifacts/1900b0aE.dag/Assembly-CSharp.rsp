@@ -401,6 +401,7 @@
 "Assets/Scripts/RTSMultiSelect.cs"
 "Assets/Scripts/SoldierController.cs"
 "Assets/Scripts/UnitController.cs"
+"Assets/Scripts/UnitHealth.cs"
 "Assets/Scripts/UnitSpawner.cs"
 "Assets/Scripts/VillagerController.cs"
 "Assets/SelectableUnit.cs"

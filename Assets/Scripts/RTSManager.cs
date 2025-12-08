@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.EventSystems; // UI Tıklaması kontrolü için gerekli
+using UnityEngine.EventSystems;
+using Photon.Pun;
 
 public class RTSManager : MonoBehaviour
 {
@@ -14,9 +15,7 @@ public class RTSManager : MonoBehaviour
     public List<SelectableUnit> selectedUnits = new List<SelectableUnit>();
 
     [Header("Bina İnşa Ayarları")]
-    public GameObject buildingPrefab;
-
-    // YENİ EKLENDİ: Binanın ağaçların tepesine çıkmaması için sadece zemini görecek katman
+    public GameObject buildingPrefab; // RESOURCES içinde olacak
     public LayerMask groundLayer;
 
     private GameObject previewBuilding;
@@ -34,57 +33,45 @@ public class RTSManager : MonoBehaviour
 
     void Update()
     {
-        // 1. Standart seçim ve hareket işlemleri
         HandleClickSelection();
         HandleMovement();
 
-        // 2. Eğer inşaat modundaysak, bina mouse'u takip etmeli
         if (isPlacingBuilding)
-        {
             HandleBuildingPlacement();
-        }
     }
 
     // ---------------------------------------------------
-    // 1. BİNA İNŞA SİSTEMİ (BUGFIX YAPILMIŞ HALİ)
+    // BİNA İNŞA BAŞLATMA
     // ---------------------------------------------------
-
-    // Bu fonksiyonu UI Butonuna bağla
     public void BuildHouse()
     {
-        // Eğer zaten elimizde yerleşmeyi bekleyen bina varsa yenisini yaratma
         if (isPlacingBuilding) return;
-
-        // --- GÜVENLİK KONTROLLERİ ---
-        if (buildingPrefab == null) { Debug.LogError("HATA: RTSManager'da Building Prefab atanmamış!"); return; }
+        if (buildingPrefab == null) { Debug.LogError("Building Prefab atanmadı!"); return; }
 
         Building bd = buildingPrefab.GetComponent<Building>();
-        if (bd == null) { Debug.LogError("HATA: Prefab üzerinde 'Building' scripti yok!"); return; }
+        if (bd == null) { Debug.LogError("Prefabta Building script yok!"); return; }
 
-        if (ResourceManager.Instance == null) { Debug.LogError("HATA: Sahnede ResourceManager yok!"); return; }
-
-        // Parası yetiyor mu kontrolü (Ama henüz harcamıyoruz)
         if (ResourceManager.Instance.Gold < bd.goldCost)
         {
             Debug.Log("Altın yetersiz!");
             return;
         }
 
-        // --- BİNAYI YARATMA ---
+        // Preview bina oluştur (LOCAL)
         previewBuilding = Instantiate(buildingPrefab);
 
-        // --- CRITICAL FIX: COLLIDER KAPATMA ---
-        // Bina mouse ucundayken Raycast (Lazer) kendi çatısına çarpmasın diye hayalet yapıyoruz.
+        // Colliders kapatılmazsa raycast çarpıyor!
         foreach (var col in previewBuilding.GetComponentsInChildren<Collider>())
-        {
             col.enabled = false;
-        }
 
-        // Takip modunu başlat
         isPlacingBuilding = true;
-        Debug.Log("İnşa modu başladı. Yer seçiniz...");
+
+        Debug.Log("İnşa modu başlatıldı.");
     }
 
+    // ---------------------------------------------------
+    // BİNA YERLEŞTİRME
+    // ---------------------------------------------------
     void HandleBuildingPlacement()
     {
         if (previewBuilding == null)
@@ -93,64 +80,59 @@ public class RTSManager : MonoBehaviour
             return;
         }
 
-        // 1. KAMERADAN IŞIN ÇIKAR
+        // Mouse ray
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-        // 2. MATEMATİKSEL ZEMİN OLUŞTUR (Yüksekliği 0 olan sonsuz bir düzlem)
-        // Bu yöntem Terrain Collider'a veya Layer ayarlarına ihtiyaç duymaz!
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-        float rayDistance;
+        float distance;
 
-        // 3. IŞIN BU DÜZLEME ÇARPTI MI?
-        if (groundPlane.Raycast(ray, out rayDistance))
+        if (groundPlane.Raycast(ray, out distance))
         {
-            // Çarptığı noktayı bul
-            Vector3 point = ray.GetPoint(rayDistance);
-
-            // Binayı o noktaya taşı
+            Vector3 point = ray.GetPoint(distance);
             previewBuilding.transform.position = point;
         }
 
-        // --- SOL TIK: YERLEŞTİRME ---
+        // SOL TIK → BİNA KUR
         if (Input.GetMouseButtonDown(0))
         {
-            // UI üzerine tıklıyorsak binayı oraya bırakma
-            if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) return;
+            if (EventSystem.current.IsPointerOverGameObject()) return;
 
             Building bd = buildingPrefab.GetComponent<Building>();
 
-            // Para kontrolü ve harcama
             if (ResourceManager.Instance.TrySpendGold(bd.goldCost))
             {
-                // Colliderları geri aç (Artık katı olsun)
-                foreach (var col in previewBuilding.GetComponentsInChildren<Collider>())
-                {
-                    col.enabled = true;
-                }
+                // Final pozisyonu al
+                Vector3 pos = previewBuilding.transform.position;
+                Quaternion rot = previewBuilding.transform.rotation;
 
-                // İnşaatı bitir
+                // Preview yok et
+                Destroy(previewBuilding);
                 previewBuilding = null;
                 isPlacingBuilding = false;
-                Debug.Log("Bina matematiksel düzleme yerleştirildi!");
+
+                // 🔥 GERÇEK MULTIPLAYER BİNA OLUŞTUR
+                PhotonNetwork.Instantiate(buildingPrefab.name, pos, rot);
+
+                Debug.Log("🏛 Multiplayer bina yerleştirildi!");
             }
             else
             {
-                Debug.Log("Paran yetmedi, yerleştiremedin!");
+                Debug.Log("Yetersiz altın!");
             }
         }
 
-        // --- SAĞ TIK: İPTAL ---
+        // SAĞ TIK → İPTAL
         if (Input.GetMouseButtonDown(1))
         {
             Destroy(previewBuilding);
             previewBuilding = null;
             isPlacingBuilding = false;
-            Debug.Log("İptal edildi.");
+            Debug.Log("İnşa iptal edildi.");
         }
     }
 
     // ---------------------------------------------------
-    // 2. SEÇİM SİSTEMİ (SENİN KODLARIN - AYNI KALDI)
+    // SOL TIK → UNIT / BARRACKS SEÇİMİ
     // ---------------------------------------------------
     void HandleClickSelection()
     {
@@ -158,7 +140,6 @@ public class RTSManager : MonoBehaviour
         {
             if (EventSystem.current.IsPointerOverGameObject()) return;
 
-            // İnşaat modundaysak seçim yapma, binayı koymaya çalışıyoruzdur
             if (isPlacingBuilding) return;
 
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -166,7 +147,7 @@ public class RTSManager : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                // 1. Unit Seçimi
+                // Unit seçimi
                 SelectableUnit su = hit.transform.GetComponentInParent<SelectableUnit>();
                 if (su != null)
                 {
@@ -176,62 +157,48 @@ public class RTSManager : MonoBehaviour
                     return;
                 }
 
-                // 2. Barracks Seçimi
+                // Barracks seçimi
                 UnitSpawner building = hit.transform.GetComponentInParent<UnitSpawner>();
-                if (building != null)
+                if (building != null && building.photonView.IsMine)
                 {
-                    if (building.photonView.IsMine)
-                    {
-                        selectedBarracks = building;
-                        ClearSelection();
-                        Debug.Log("Kışla Seçildi: " + building.name);
-                    }
-                }
-                else
-                {
-                    selectedBarracks = null;
+                    selectedBarracks = building;
                     ClearSelection();
+                    Debug.Log("Kışla seçildi: " + building.name);
+                    return;
                 }
+
+                selectedBarracks = null;
+                ClearSelection();
             }
         }
     }
 
     // ---------------------------------------------------
-    // UI BUTON FONKSİYONLARI
-    // ---------------------------------------------------
-    public void UI_Button_SpawnVillager()
-    {
-        if (selectedBarracks != null) selectedBarracks.TrySpawnUnit("Villager");
-    }
-
-    public void UI_Button_SpawnSoldier()
-    {
-        if (selectedBarracks != null) selectedBarracks.TrySpawnUnit("Soldier");
-    }
-
-    // ---------------------------------------------------
-    // UNIT HAREKET FONKSİYONLARI
+    // SAĞ TIK → UNIT HAREKET ETTİRME
     // ---------------------------------------------------
     void HandleMovement()
     {
         if (Input.GetMouseButtonDown(1) && selectedUnits.Count > 0)
         {
-            // İnşaat modundaysak hareket emri verme (iptal tuşu ile karışmasın)
             if (isPlacingBuilding) return;
 
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+
             if (Physics.Raycast(ray, out hit))
             {
                 foreach (SelectableUnit su in selectedUnits)
                 {
-                    if (su.GetComponent<UnitController>())
-                        su.GetComponent<UnitController>().MoveTo(hit.point);
+                    UnitController uc = su.GetComponent<UnitController>();
+                    if (uc) uc.MoveTo(hit.point);
                 }
             }
         }
     }
 
+    // ---------------------------------------------------
+    // UNIT SEÇİM FONKSİYONLARI
+    // ---------------------------------------------------
     public void AddToSelection(SelectableUnit unit)
     {
         if (!selectedUnits.Contains(unit))
@@ -248,5 +215,20 @@ public class RTSManager : MonoBehaviour
             if (u != null) u.SetSelected(false);
         }
         selectedUnits.Clear();
+    }
+
+    // ---------------------------------------------------
+    // UI BUTTON → UNIT SPAWN
+    // ---------------------------------------------------
+    public void UI_Button_SpawnVillager()
+    {
+        if (selectedBarracks != null)
+            selectedBarracks.TrySpawnUnit("Villager");
+    }
+
+    public void UI_Button_SpawnSoldier()
+    {
+        if (selectedBarracks != null)
+            selectedBarracks.TrySpawnUnit("Soldier");
     }
 }

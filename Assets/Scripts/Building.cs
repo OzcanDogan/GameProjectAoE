@@ -1,14 +1,22 @@
 ﻿using UnityEngine;
+using Photon.Pun;
 
-public class Building : MonoBehaviour
+public class Building : MonoBehaviourPun
 {
-    public int populationBonus = 3;  // Bu bina population cap'i ne kadar yükseltecek?
-    public int goldCost = 10;        // Binanın maliyeti
+    public int populationBonus = 3;
+    public int goldCost = 10;
 
     void Start()
     {
-        // Bina kurulduğu anda population cap'i artır
-        ResourceManager.Instance.AddPopulationCap(populationBonus);
+        // Population sadece bina sahibinde artsın
+        if (photonView.IsMine)
+        {
+            ResourceManager.Instance.AddPopulationCap(populationBonus);
+            Debug.Log("🏛 Population +" + populationBonus + " artırıldı (Bu bina bana ait).");
+        }
+        else
+        {
+            Debug.Log("👁 Bu bina bana ait değil → population artırmıyorum.");
+        }
     }
 }
-    

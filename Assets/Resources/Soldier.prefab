@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 6284065348316301363}
   - component: {fileID: 6137143480114240232}
   - component: {fileID: -6068209107615001520}
+  - component: {fileID: 8769391755539560134}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Soldier
@@ -380,6 +381,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 150
   isBuilding: 0
+--- !u!114 &8769391755539560134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba542e8aafb5b648ad832efc644022a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitType: 0
+  parts:
+  - {fileID: 13743514}
 --- !u!1 &120650
 GameObject:
   m_ObjectHideFlags: 0
